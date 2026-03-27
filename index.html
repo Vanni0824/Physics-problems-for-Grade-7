@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Физика 7 Класс | Тренажер</title>
+    <meta name="description" content="Интерактивный тренажер по физике для 7 класса. Решай задачи, проверяй знания, становись лучше!">
+    <meta name="keywords" content="физика 7 класс, задачи по физике, тренажер, подготовка к контрольным, физика онлайн">
+    <meta name="author" content="Ваше имя или название проекта">
+    
+    <!-- === OPEN GRAPH (для соцсетей и мессенджеров) === -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ваш-сайт.github.io/">
+    <meta property="og:title" content="Физика 7 Класс | Интерактивный тренажер задач">
+    <meta property="og:description" content="Решай задачи по физике онлайн и становись лучше! Бесплатный тренажер для 7 класса с проверкой ответов.">
+    <meta property="og:image" content="https://ваш-сайт.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Физика 7 Класс">
+    
+    <!-- === TWITTER CARD === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Физика 7 Класс | Тренажер задач">
+    <meta name="twitter:description" content="Интерактивный тренажер по физике для 7 класса. Решай задачи и проверяй знания!">
+    <meta name="twitter:image" content="https://ваш-сайт.github.io/og-image.png">
+    
+    <!-- === ТЕГИ ДЛЯ МОБИЛЬНЫХ === -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Физика 7">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем современный шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo">⚛️ Физика 7 Класс</div>
+            <p class="subtitle">Решай задачи и становись лучше!</p>
+        </header>
+
+        <div class="container">
+            <!-- Блок ввода ника -->
+            <div class="user-section">
+                <label for="nick">Представьтесь:</label>
+                <div class="input-group">
+                    <input type="text" id="nick" class="input-nick" placeholder="Ваш никнейм">
+                </div>
+            </div>
+
+            <!-- Область задачи -->
+            <div class="task-card">
+                <div class="task-header">
+                    <span class="badge">Задача №<span id="taskNumber">1</span></span>
+                </div>
+                <div class="task-content">
+                    <p id="taskText" class="task-text">Загрузка...</p>
+                </div>
+                
+                <div class="answer-section">
+                    <input type="number" id="userAnswer" class="input-answer" placeholder="Введите числовой ответ">
+                    <div class="controls">
+                        <button onclick="checkAnswer()" class="btn btn-check">Проверить</button>
+                        <button onclick="resetTask()" class="btn btn-next">Следующая</button>
+                    </div>
+                    <div id="result" class="result-message"></div>
+                </div>
+            </div>
+
+            <!-- Таблица лидеров -->
+            <div class="leaderboard">
+                <h3>🏆 Доска почета</h3>
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Ник</th>
+                            <th>Решено задач верно</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Сюда вставляются строки через JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Удачи в учебе!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
